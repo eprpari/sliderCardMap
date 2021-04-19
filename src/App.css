@@ -2,6 +2,96 @@
   text-align: center;
 }
 
+
+/* card .sliders */
+.card_body{
+  margin: 0px;
+  padding: 0px;
+
+}
+
+.ul{
+  list-style: none;
+}
+
+.a{
+  text-decoration: none;
+}
+
+.container_card{
+  width: 100%;
+  height: 100vh;
+  background-color: blueviolet;
+  display: flex;
+  justify-content: center;
+}
+.logo1{
+  width: 100px;
+  height: auto;
+}
+.model{
+  height: 350px;
+  max-height: 100%;
+  max-width: 100%;
+}
+.box{
+  width: 350px;
+  height: 610px;
+  background-color: floralwhite;
+  border-radius: 10px;
+  box-shadow: 2px 10px 12px rgba(0, 0, 0,0.5);
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  margin: 20px 10px;
+
+ 
+}
+
+.details{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+}
+
+.details p{
+  font-family: calibri;
+  font-weight: bold;
+  color: darksalmon;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.marvel{
+  color: aqua;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-family: bebas kai;
+  font-size: 25px;
+}
+
+.logo{
+  height: 60px;
+}
+
+.box:hover{
+  background-color: blue;
+  transform-style: preserve-3d;
+  transform: scale(1.02);
+  transition: all ease 0.3s;
+}
+.box:hover .marvel{
+  color: violet;
+  transition: all ease 0.5s;
+}
+/* card .sliders  end*/
+
+
+
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -23,9 +113,189 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.displaynone{
+  display: none;
+}
 
+ /* .bg1{
+   background-image: url(https://media.istockphoto.com/photos/professional-engineer-architect-worker-with-protective-helmet-and-picture-id1041465228?k=6&m=1041465228&s=612x612&w=0&h=c1oCAO9jJPHD3zAcKxMad78spVE_xOt_5i4XOQZ1kMg=);
+}  */
+
+bg2{
+  /* background-image: url(../public/images/slider-main/bg2.jpg); */
+  background-color:#282c34 ;
+} */
+
+ .bg3{
+  /* background-image: url(../public/images/slider-main/bg3.jpg); */
+  background-color:#282c34 ;
+} 
+.bg4{
+  /* backdrop-image:url(images/banner/banner1.jpg) ; */
+  background-color:#282c34 ;
+
+}
+.aws-sld {
+  --fall-animation-duration: 700ms;
+  --fall-animation-angle: 16deg;
+  --fall-scaling-in-from: 0.9;
+
+
+}
+
+/* silder class start */
+
+.silder_body{
+  margin: 0%;
+  padding: 0;
+  height: 100px;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  background-color: ghostwhite;
+}
+.slider{
+  width: 8000px;
+  height: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.sliders{
+  width: 1000px;
+  height: 500px;
+  display: flex;
+}
+ 
+
+.sliders input{
+   display: none;
+
+}
+
+.slide {
+  width: 40%;
+  transition: 2s;
+}
+
+.slide img{
+  width: 800px;
+  height: 500px;
+
+}
+
+/* manual silder start */
+
+.navigation-manual{
+    position:absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.manual-btn{
+  border : 2px solid steelblue;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+  margin-right: 40px;
+
+}
+
+.manual-btn:hover{
+  background: steelblue;
+}
+
+
+#radio1:checked ~ .first{
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+  margin-left: -20%;
+}
+#radio3:checked ~ .first{
+  margin-left: -40%;
+}
+#radio4:checked ~ .first{
+  margin-left: -60%;
+}
+
+
+
+
+
+
+
+/* manual silder end */
+
+
+
+/* automation .navigation-manual start */
+.navigation-auto{
+  position:absolute;
+  display: flex;
+  width: 800px;
+  justify-content: center;
+  margin-top: 460px;
+
+}
+
+.navigation-auto div{
+  border: 2px solid black;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+
+.navigation-auto div:not(:last-child){
+  margin-right: 40px;
+}
+
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+  background: black;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+  background: black;
+}
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+  background: black;
+}
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+  background: black;
+}
+/* automation .navigation-manual end */
+
+
+
+
+
+/* silder class end */
+
+
+
+
+
+
+.red{
+  background-color:darkgrey;
+}
+.none1 {
+  display: none;
+}
 .App-link {
   color: #61dafb;
+}
+.fixed{
+     position:relative ;
 }
 
 @keyframes App-logo-spin {
