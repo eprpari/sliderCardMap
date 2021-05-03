@@ -1,11 +1,15 @@
 import React , {Component} from 'react';
 import {Link} from "react-router-dom";
+import WorkForceSlider from './WorkForceSlider';
 
 class Workforce extends React.Component {
     render() {
        
         return(
+          <>
+<div>
 
+</div>
             <div className="body-inner">
 
       
@@ -19,7 +23,7 @@ class Workforce extends React.Component {
                         <nav aria-label="breadcrumb">
                             <ol className="breadcrumb justify-content-center">
                               <li className="breadcrumb-item"><a href="#">Home</a></li>
-                              <li className="breadcrumb-item"><a href="#">company</a></li>
+                              <li className="breadcrumb-item"><a href="#">Work Force</a></li>
                               <li className="breadcrumb-item active" aria-current="page">Our Team</li>
                             </ol>
                         </nav>
@@ -40,7 +44,7 @@ class Workforce extends React.Component {
 
 
 
-
+        <WorkForceSlider/>
 
         
         <section id="main-container" className="main-container pb-4">
@@ -222,6 +226,7 @@ class Workforce extends React.Component {
           <script src="js/script.js"></script>
         
           </div>
+          </>
           
         )
     

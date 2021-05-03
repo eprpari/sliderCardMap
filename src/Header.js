@@ -7,7 +7,30 @@ import './App.css'
 
 import './css/style.css'
 
+import axios from 'axios'
+
+
 class Header extends React.Component {
+
+  constructor(props){
+    super(props);
+    this.state ={
+    
+    companyNames:[],
+    
+    }
+    }
+    componentDidMount(){
+    axios.get('http://localhost:8080/admin/company')
+    .then(response => {
+    console.log(response.data)
+    this.setState({
+    companyNames: response.data
+    })
+    })
+    
+    }
+
     render(){
        
         return(
@@ -19,8 +42,8 @@ class Header extends React.Component {
     <div className="container" >
       <div className="logo-area">
           <div className="row align-items-center">
-            <div className="logo col-lg-3 text-center text-lg-left mb-3 mb-md-5 mb-lg-0">
-                <a className="d-block" href="index.html">
+            <div className=" col-lg-3 text-center text-lg-left mb-3 mb-md-5 mb-lg-0">
+                <a className="d-block" href="/" >
                   <img loading="lazy" src="images/logo.png" alt="E.P.R" className="logo"/>
                 </a>
             </div>
@@ -53,7 +76,7 @@ class Header extends React.Component {
                     </div>
                   </li>
                   <li className="header-get-a-quote">
-                    <a className="btn btn-primary" href="contact.html">Get A Quote</a>
+                    <a className="btn  btn-outline-dark " href="http">Get A Quote</a>
                   </li>
                 </ul>
                 {/* <!-- Ul end --> */}
@@ -68,15 +91,15 @@ class Header extends React.Component {
     {/* <!-- Container end --> */}
   </div>
 
-  <div className="site-navigation fixed">
-    <div className="container">
+  <div className="site-navigation navbar-fixed-top bg-dark  ">
+    <div className="container ">
         <div className="row">
-          <div className="col-lg-12">
-              <nav className="navbar navbar-expand-lg navbar-light p-0">
+          <div className="col-lg-12 ">
+              <nav className="navbar navbar-expand-lg   bg-dark navbar-dark p-0 ">
                 
                 <div className="logo">
-                    <a className="d-block" href="index-2.html">
-                      <img loading="lazy" src="images/logo.png" alt="Constra"/>
+                    <a className="d-block" href="/">
+                      <img loading="lazy"  src="images/logo.png" alt="E.P.R"/>
                     </a>
                 </div>
                 {/* !-- logo end --> */}
@@ -85,9 +108,9 @@ class Header extends React.Component {
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 
-                <div id="navbar-collapse" className="collapse navbar-collapse">
+                <div id="navbar-collapse" className=" collapse navbar-collapse">
                     <ul className="nav navbar-nav ml-auto align-items-center">
-                      <li className="nav-item dropdown active">
+                      <li className="nav-item dropdown " style={{color:"//#ff3433"}}>
                           <Link to="/" className="nav-link dropdown-toggle">Home</Link>
                           {/* <ul className="dropdown-menu" role="menu">
                             <li><a href="index.html">Home One</a></li>
@@ -95,17 +118,27 @@ class Header extends React.Component {
                           </ul> */}
                       </li>
 
-                      <li className="nav-item dropdown">
-                          <a href="#" className="nav-link dropdown-toggle" data-toggle="dropdown">Company <i className="fa fa-angle-down"></i></a>
+                      <li className="nav-item dropdown ">
+                      <Link to="/company" className="nav-link dropdown-toggle " data-toggle="dropdown">Company
+                          <i className="fa fa-angle-down"></i></Link>
                           <ul className="dropdown-menu" role="menu">
-                            <li><a href="about.html">About Us</a></li>
+                          {this.state.companyNames.map(companyname =>
+                           
+                           <li>
+                             
+                              <a href={"/view-company/"+companyname.id} option key={companyname.id} value={companyname}> <center>{companyname.companyName} </center>
+                              </a>
+                            </li>
+)
+} 
+                            {/* <li><a href="/company/{t/id}">About Us</a></li>
                             <li><a href="team.html">Our People</a></li>
                             <li><a href="testimonials.html">Testimonials</a></li>
-                            <li><a href="faq.html">Faq</a></li>
-                            <li><a href="pricing.html">Pricing</a></li>
+                            <li><a href="faq.html">Faq</a></li> */}
+                            
                           </ul>
                       </li>
-              
+{/*               
                       <li className="nav-item dropdown">
                           <a href="#" className="nav-link dropdown-toggle" data-toggle="dropdown">Projects <i className="fa fa-angle-down"></i></a>
                           <ul className="dropdown-menu" role="menu">
@@ -120,30 +153,41 @@ class Header extends React.Component {
                             <li><a href="services.html">Services All</a></li>
                             <li><a href="service-single.html">Services Single</a></li>
                           </ul>
-                      </li>
+                      </li> */}
               
-                      <li className="nav-item dropdown">
-                          <Link to="/workforce" className="nav-link dropdown-toggle" >Work Force </Link>
+                      <li className="nav-item dropdown ">
+                          <Link to="/workforce" className="nav-link dropdown-toggle" >Work Force</Link>
       
                       </li>
               
-                      <li className="nav-item dropdown">
+                      {/* <li className="nav-item dropdown">
                           <a href="#" className="nav-link dropdown-toggle" data-toggle="dropdown">News <i className="fa fa-angle-down"></i></a>
                           <ul className="dropdown-menu" role="menu">
                             <li><a href="news-left-sidebar.html">News Left Sidebar</a></li>
                             <li><a href="news-right-sidebar.html">News Right Sidebar</a></li>
                             <li><a href="news-single.html">News Single</a></li>
                           </ul>
-                      </li>
-              
+                      </li> */}
+                <li className="nav-item">
+                        <Link to="/materials" className="nav-link">Material</Link>
+                        </li>
+
+                        <li className="nav-item">
+                        <Link to="/homeautomation" className="nav-link">Home Automation</Link>
+                        </li>
+                      
+                        <li className="nav-item">
+                        <Link to="/plant" className="nav-link">plant</Link>
+                        </li>
+                      
+
                       <li className="nav-item">
                         <Link to="/Contact" className="nav-link">Contact</Link>
                         </li>
 
                         <li className="nav-item">
-                        <Link to="/Aboutus" className="nav-link">About Us</Link>
+                        <Link to="/peoplesaid" className="nav-link">People Said</Link>
                         </li>
-
                       {/* <li className="header-get-a-quote">
                           <a className="btn btn-primary" href="contact.html">Get Free Quote</a>
                       </li> */}

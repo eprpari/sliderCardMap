@@ -8,7 +8,8 @@ import './css/style.css'
 
 // import '../public/css/';
 import console from './console.js'
-
+import epr from "./video/epr.mp4"
+import AddSlider from './HomeSlider1';
 
 
 
@@ -22,17 +23,17 @@ class Home2 extends React.Component {
         
     
       
-    componentDidMount(){
-      var counter=1;
-      setInterval(() => {
+    // componentDidMount(){
+    //   var counter=1;
+    //   setInterval(() => {
 
-      document.getElementById('radio' + counter).checked = true;
-      counter ++;
-         if (counter > 4) {
-           counter = 1;
-         }
-    }, 5000);
-    }
+    //   document.getElementById('radio' + counter).checked = true;
+    //   counter ++;
+    //      if (counter > 4) {
+    //        counter = 1;
+    //      }
+    // }, 5000);
+    // }
 
 
 
@@ -44,71 +45,12 @@ class Home2 extends React.Component {
     
 
          
+          <AddSlider/>
+          
 
-          {/* image silder start */}
-          <div className="slider silder_body">
-            <div className="sliders">
-              {/* redio button start */}
-              <input type="radio" name="radio-name-1" id="radio1"/>
-              <input type="radio" name="radio-name-1" id="radio2"/>
-              <input type="radio" name="radio-name-1" id="radio3"/>
-              <input type="radio" name="radio-name-1" id="radio4"/>
-
-              {/* redio button end */}
-
-
-            {/* slider image start */}
-            <div className="slide first">
-              <img src="https://neilpatel.com/wp-content/uploads/2017/09/image-editing-tools.jpg" alt="  "/>
-            </div>
-
-
-            <div className="slide">
-              <img src="https://ljhollowayphotographytraining.com/wp-content/uploads/2016/09/AO3A9520Edit-1X.jpg" alt=""/>
-            </div>
-
-            <div className="slide">
-              <img src="https://ljhollowayphotographytraining.com/wp-content/uploads/2016/09/AO3A9520Edit-1X.jpg" alt=""/>
-            </div>
-
-            <div className="slide">
-              <img src="https://ljhollowayphotographytraining.com/wp-content/uploads/2016/09/AO3A9520Edit-1X.jpg" alt=""/>
-            </div>
-
-
-
-            {/* slider image End */}
-
-              {/* automation navgesion start */}
-              <div className="navigation-auto">
-                <div className="auto-btn1"></div>
-                <div className="auto-btn2"></div>
-                <div className="auto-btn3"></div>
-                <div className="auto-btn4"></div>
-              </div>
-              {/* automation navgesion end */}
-
-            </div>
-              {/* manual navigation start */}
-                <div className="navigation-manual">
-                  <label for="radio1" className="manual-btn"></label>
-                  <label for="radio2" className="manual-btn"></label>
-                  <label for="radio3" className="manual-btn"></label>
-                  <label for="radio4" className="manual-btn"></label>
-
-
-                </div>
-
-
-
-
-              {/* manual navigation end */}
-            
-          </div>
-          {/* image silder end */}
-
-
-            
+            <video autoPlay loop  muted>
+              <source src={epr} type="video/mp4"/>
+            </video>
            
 
          
@@ -154,13 +96,13 @@ class Home2 extends React.Component {
                 <div className="row">
                   <div className="col-md-8 text-center text-md-left">
                       <div className="call-to-action-text">
-                        <h3 className="action-title">We understand your needs on construction</h3>
+                        <h3 className="action-title">You can contact us 24/7. We are waiting to provide the best service for you</h3>
                       </div>
                   </div>
                   {/* <!-- Col end --> */}
                   <div className="col-md-4 text-center text-md-right mt-3 mt-md-0">
                       <div className="call-to-action-btn">
-                        <a className="btn btn-primary" href="contact.html">Request Quote</a>
+                        <a className="btn btn-outline-light " href="https://web.whatsapp.com/send?phone=94741717119&text=Hey%20Olai!" target="_blank"><i class='fab fa-whatsapp-square' style={{fontSize:"40px"}}></i></a>
                       </div>
                   </div>
                   {/* <!-- col end --> */}
@@ -179,16 +121,16 @@ class Home2 extends React.Component {
                 <div className="col-lg-4 col-md-6 mb-5">
                   <div className="ts-service-box">
                       <div className="ts-service-image-wrapper">
-                        <img loading="lazy" className="w-100" src="images/services/service1.jpg" alt="service-image"/>
+                        <img loading="lazy" className="w-100" src="https://i.dlpng.com/static/png/372495_preview.png"/>
                       </div>
                       <div className="d-flex">
                         <div className="ts-service-box-img">
                             <img loading="lazy" src="images/icon-image/service-icon1.png" alt="service-icon" />
                         </div>
                         <div className="ts-service-info">
-                            <h3 className="service-box-title"><a href="service-single.html">Zero Harm Everyday</a></h3>
-                            <p>You have ideas, goals, and dreams. We have a culturally diverse, forward thinking team looking for talent like. Lorem ipsum dolor suscipit.</p>
-                            <a className="learn-more d-inline-block" href="service-single.html" aria-label="service-details"><i className="fa fa-caret-right"></i> Learn more</a>
+                            <h3 className="service-box-title"><a href="/company">Company</a></h3>
+                            <p>You have ideas, goals, and dreams. We have a culturally diverse, forward thinking team looking for talent like. </p>
+                            <a className="learn-more d-inline-block" href="/company" aria-label="service-details"><i className="fa fa-caret-right"></i> Learn more</a>
                         </div>
                       </div>
                   </div>
@@ -199,16 +141,16 @@ class Home2 extends React.Component {
                 <div className="col-lg-4 col-md-6 mb-5">
                   <div className="ts-service-box">
                       <div className="ts-service-image-wrapper">
-                        <img loading="lazy" className="w-100" src="images/services/service2.jpg" alt="service-image"/>
+                        <img loading="lazy" className="w-100" src="https://i0.wp.com/tridenstechnology.com/wp-content/uploads/2019/07/Smart-home.png" alt="service-image"/>
                       </div>
                       <div className="d-flex">
                         <div className="ts-service-box-img">
                             <img loading="lazy" src="images/icon-image/service-icon2.png" alt="service-icon" />
                         </div>
                         <div className="ts-service-info">
-                            <h3 className="service-box-title"><a href="service-single.html">Virtual Construction</a></h3>
-                            <p>You have ideas, goals, and dreams. We have a culturally diverse, forward thinking team looking for talent like. Lorem ipsum dolor suscipit.</p>
-                            <a className="learn-more d-inline-block" href="service-single.html" aria-label="service-details"><i className="fa fa-caret-right"></i> Learn more</a>
+                            <h3 className="service-box-title"><a href="/homeautomation">Home Automation</a></h3>
+                            <p>Get the best technology in our media in your dream home.Get the foundation for your dreams with a low cost mindset</p>
+                            <a className="learn-more d-inline-block" href="/homeautomation" aria-label="service-details"><i className="fa fa-caret-right"></i> Learn more</a>
                         </div>
                       </div>
                   </div>
@@ -219,16 +161,16 @@ class Home2 extends React.Component {
                 <div className="col-lg-4 col-md-6 mb-5">
                   <div className="ts-service-box">
                       <div className="ts-service-image-wrapper">
-                        <img loading="lazy" className="w-100" src="images/services/service3.jpg" alt="service-image"/>
+                        <img loading="lazy" className="w-100" src="https://bluecollarpeople.com/wp-content/uploads/contract-workers.jpg" alt="service-image"/>
                       </div>
                       <div className="d-flex">
                         <div className="ts-service-box-img">
                             <img loading="lazy" src="images/icon-image/service-icon3.png" alt="service-icon" />
                         </div>
                         <div className="ts-service-info">
-                            <h3 className="service-box-title"><a href="service-single.html">Build To Last</a></h3>
-                            <p>You have ideas, goals, and dreams. We have a culturally diverse, forward thinking team looking for talent like. Lorem ipsum dolor suscipit.</p>
-                            <a className="learn-more d-inline-block" href="service-single.html" aria-label="service-details"><i className="fa fa-caret-right"></i> Learn more</a>
+                            <h3 className="service-box-title"><a href="/workforce">Work Force</a></h3>
+                            <p>The workforce or labour force is the labour pool either in employment or unemployed. It is generally used to describe </p>
+                            <a className="learn-more d-inline-block" href="/workforce" aria-label="service-details"><i className="fa fa-caret-right"></i> Learn more</a>
                         </div>
                       </div>
                   </div>
@@ -242,7 +184,7 @@ class Home2 extends React.Component {
         </section>
         {/* <!-- Feature are end --> */}
         
-        <section id="facts" className="facts-area dark-bg">
+        {/* <section id="facts" className="facts-area dark-bg">
           <div className="container">
             <div className="facts-wrapper">
                 <div className="row">
@@ -255,7 +197,7 @@ class Home2 extends React.Component {
                         <h3 className="ts-facts-title">Total Projects</h3>
                       </div>
                   </div>
-                  {/* <!-- Col end --> */}
+                 
         
                   <div className="col-md-3 col-sm-6 ts-facts mt-5 mt-sm-0">
                       <div className="ts-facts-img">
@@ -266,7 +208,7 @@ class Home2 extends React.Component {
                         <h3 className="ts-facts-title">Staff Members</h3>
                       </div>
                   </div>
-                  {/* <!-- Col end --> */}
+                  
         
                   <div className="col-md-3 col-sm-6 ts-facts mt-5 mt-md-0">
                       <div className="ts-facts-img">
@@ -277,7 +219,7 @@ class Home2 extends React.Component {
                         <h3 className="ts-facts-title">Hours of Work</h3>
                       </div>
                   </div>
-                  {/* <!-- Col end --> */}
+               
         
                   <div className="col-md-3 col-sm-6 ts-facts mt-5 mt-md-0">
                       <div className="ts-facts-img">
@@ -288,16 +230,16 @@ class Home2 extends React.Component {
                         <h3 className="ts-facts-title">Countries Experience</h3>
                       </div>
                   </div>
-                  {/* <!-- Col end --> */}
+                  
         
                 </div> 
-                {/* <!-- Facts end --> */}
+              
             </div>
-            {/* <!--/ Content row end --> */}
+         
           </div>
-          {/* <!--/ Container end --> */}
+      
         </section>
-        {/* <!-- Facts end --> */}
+       */}
         
         <section id="ts-service-area" className="ts-service-area pb-0">
           <div className="container">
@@ -316,7 +258,7 @@ class Home2 extends React.Component {
                         <img loading="lazy" src="images/icon-image/service-icon1.png" alt="service-icon"/>
                       </div>
                       <div className="ts-service-box-info">
-                        <h3 className="service-box-title"><a href="#">Home Construction</a></h3>
+                        <h3 className="service-box-title"><a href="/company">Company</a></h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Integer adipiscing erat</p>
                       </div>
                   </div>
@@ -327,7 +269,7 @@ class Home2 extends React.Component {
                         <img loading="lazy" src="images/icon-image/service-icon2.png" alt="service-icon"/>
                       </div>
                       <div className="ts-service-box-info">
-                        <h3 className="service-box-title"><a href="#">Building Remodels</a></h3>
+                        <h3 className="service-box-title"><a href="/smartautomation">Smart Automation</a></h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Integer adipiscing erat</p>
                       </div>
                   </div>
@@ -348,7 +290,7 @@ class Home2 extends React.Component {
                 {/* <!-- Col end --> */}
         
                 <div className="col-lg-4 text-center">
-                  <img loading="lazy" className="img-fluid" src="images/services/service-center.jpg" alt="service-avater-image"/>
+                  <img loading="lazy" className="img-fluid" src="https://st.depositphotos.com/1037178/1537/v/600/depositphotos_15370661-stock-illustration-cartoon-electrician-character.jpg" alt="service-avater-image"/>
                 </div>
                 {/* <!-- Col end --> */}
         
@@ -358,7 +300,7 @@ class Home2 extends React.Component {
                         <img loading="lazy" src="images/icon-image/service-icon4.png" alt="service-icon"/>
                       </div>
                       <div className="ts-service-box-info">
-                        <h3 className="service-box-title"><a href="#">Exterior Design</a></h3>
+                        <h3 className="service-box-title"><a href="/plant">Plant</a></h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Integer adipiscing erat</p>
                       </div>
                   </div>
@@ -369,7 +311,7 @@ class Home2 extends React.Component {
                         <img loading="lazy" src="images/icon-image/service-icon5.png" alt="service-icon"/>
                       </div>
                       <div className="ts-service-box-info">
-                        <h3 className="service-box-title"><a href="#">Renovation</a></h3>
+                        <h3 className="service-box-title"><a href="/materials">Materials</a></h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Integer adipiscing erat</p>
                       </div>
                   </div>
@@ -380,7 +322,7 @@ class Home2 extends React.Component {
                         <img loading="lazy" src="images/icon-image/service-icon6.png" alt="service-icon"/>
                       </div>
                       <div className="ts-service-box-info">
-                        <h3 className="service-box-title"><a href="#">Safety Management</a></h3>
+                        <h3 className="service-box-title"><a href="/workforce">Work Force</a></h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Integer adipiscing erat</p>
                       </div>
                   </div>
@@ -395,170 +337,290 @@ class Home2 extends React.Component {
         </section>
         {/* <!-- Service end --> */}
         
-        <section id="project-area" className="project-area solid-bg">
-          <div className="container">
-            <div className="row text-center">
-              <div className="col-lg-12">
-                <h2 className="section-title">Work of Excellence</h2>
-                <h3 className="section-sub-title">Recent Projects</h3>
-              </div>
-            </div>
-            {/* <!--/ Title row end --> */}
         
-            <div className="row">
-              <div className="col-12">
-                <div className="shuffle-btn-group">
-                  <label className="active" for="all">
-                    <input type="radio" name="shuffle-filter" id="all" value="all" checked="checked"/>Show All
-                  </label>
-                  <label for="commercial">
-                    <input type="radio" name="shuffle-filter" id="commercial" value="commercial"/>Commercial
-                  </label>
-                  <label for="education">
-                    <input type="radio" name="shuffle-filter" id="education" value="education"/>Education
-                  </label>
-                  <label for="government">
-                    <input type="radio" name="shuffle-filter" id="government" value="government"/>Government
-                  </label>
-                  <label for="infrastructure">
-                    <input type="radio" name="shuffle-filter" id="infrastructure" value="infrastructure"/>Infrastructure
-                  </label>
-                  <label for="residential">
-                    <input type="radio" name="shuffle-filter" id="residential" value="residential"/>Residential
-                  </label>
-                  <label for="healthcare">
-                    <input type="radio" name="shuffle-filter" id="healthcare" value="healthcare"/>Healthcare
-                  </label>
-                </div>
-                {/* <!-- project filter end --> */}
-        
-        
-                <div className="row shuffle-wrapper">
-                  <div className="col-1 shuffle-sizer"></div>
-        
-                  <div className="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;government&quot;,&quot;healthcare&quot;]">
-                    <div className="project-img-container">
-                      <a className="gallery-popup" href="images/projects/project1.jpg" aria-label="project-img">
-                        <img className="img-fluid" src="images/projects/project1.jpg" alt="project-img"/>
-                        <span className="gallery-icon"><i className="fa fa-plus"></i></span>
-                      </a>
-                      <div className="project-item-info">
-                        <div className="project-item-info-content">
-                          <h3 className="project-item-title">
-                            <a href="projects-single.html">Capital Teltway Building</a>
-                          </h3>
-                          <p className="project-cat">Commercial, Interiors</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  {/* <!-- shuffle item 1 end --> */}
-        
-                  <div className="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;healthcare&quot;]">
-                    <div className="project-img-container">
-                      <a className="gallery-popup" href="images/projects/project2.jpg" aria-label="project-img">
-                        <img className="img-fluid" src="images/projects/project2.jpg" alt="project-img"/>
-                        <span className="gallery-icon"><i className="fa fa-plus"></i></span>
-                      </a>
-                      <div className="project-item-info">
-                        <div className="project-item-info-content">
-                          <h3 className="project-item-title">
-                            <a href="projects-single.html">Ghum Touch Hospital</a>
-                          </h3>
-                          <p className="project-cat">Healthcare</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  {/* <!-- shuffle item 2 end --> */}
-        
-                  <div className="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;infrastructure&quot;,&quot;commercial&quot;]">
-                    <div className="project-img-container">
-                      <a className="gallery-popup" href="images/projects/project3.jpg" aria-label="project-img">
-                        <img className="img-fluid" src="images/projects/project3.jpg" alt="project-img"/>
-                        <span className="gallery-icon"><i className="fa fa-plus"></i></span>
-                      </a>
-                      <div className="project-item-info">
-                        <div className="project-item-info-content">
-                          <h3 className="project-item-title">
-                            <a href="projects-single.html">TNT East Facility</a>
-                          </h3>
-                          <p className="project-cat">Government</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  {/* <!-- shuffle item 3 end --> */}
-        
-                  <div className="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;education&quot;,&quot;infrastructure&quot;]">
-                    <div className="project-img-container">
-                      <a className="gallery-popup" href="images/projects/project4.jpg" aria-label="project-img">
-                        <img className="img-fluid" src="images/projects/project4.jpg" alt="project-img"/>
-                        <span className="gallery-icon"><i className="fa fa-plus"></i></span>
-                      </a>
-                      <div className="project-item-info">
-                        <div className="project-item-info-content">
-                          <h3 className="project-item-title">
-                            <a href="projects-single.html">Narriot Headquarters</a>
-                          </h3>
-                          <p className="project-cat">Infrastructure</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  {/* <!-- shuffle item 4 end --> */}
-        
-                  <div className="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;infrastructure&quot;,&quot;education&quot;]">
-                    <div className="project-img-container">
-                      <a className="gallery-popup" href="images/projects/project5.jpg" aria-label="project-img">
-                        <img className="img-fluid" src="images/projects/project5.jpg" alt="project-img"/>
-                        <span className="gallery-icon"><i className="fa fa-plus"></i></span>
-                      </a>
-                      <div className="project-item-info">
-                        <div className="project-item-info-content">
-                          <h3 className="project-item-title">
-                            <a href="projects-single.html">Kalas Metrorail</a>
-                          </h3>
-                          <p className="project-cat">Infrastructure</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  {/* <!-- shuffle item 5 end --> */}
-        
-                  <div className="col-lg-4 col-md-6 shuffle-item" data-groups="[&quot;residential&quot;]">
-                    <div className="project-img-container">
-                      <a className="gallery-popup" href="images/projects/project6.jpg" aria-label="project-img">
-                        <img className="img-fluid" src="images/projects/project6.jpg" alt="project-img"/>
-                        <span className="gallery-icon"><i className="fa fa-plus"></i></span>
-                      </a>
-                      <div className="project-item-info">
-                        <div className="project-item-info-content">
-                          <h3 className="project-item-title">
-                            <a href="projects-single.html">Ancraft Avenue House</a>
-                          </h3>
-                          <p className="project-cat">Residential</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  {/* <!-- shuffle item 6 end --> */}
-                </div>
-                {/* <!-- shuffle end --> */}
-              </div>
-        
-              <div className="col-12">
-                <div className="general-btn text-center">
-                  <a className="btn btn-primary" href="projects.html">View All Projects</a>
-                </div>
-              </div>
-        
-            </div>
-            {/* <!-- Content row end --> */}
-          </div>
-          {/* <!--/ Container end --> */}
-        </section>
-        {/* <!-- Project area end --> */}
+
+
+
+
+
+<section className="portfolio section-sm" id="portfolio">
+	<div className="container-fluid">
+		<div className="row ">
+			<div className="col-lg-12">
+
+
+
+
+
+
+
+<div className="title text-center">
+					<h2>Our Works</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, veritatis. Lorem ipsum dolor sit amet,
+						consectetur adipisicing elit. Minima, vitae? </p>
+					<div className="border"></div>
+				</div>
+			
+
+				<div className="row filtr-container">
+					<div className="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="mix, design">
+						<div className="portfolio-block">
+							<img className="img-fluid" style={{height:"200px",width:"400px"}} src="http://cdn.home-designing.com/wp-content/uploads/2017/05/wood-white-and-charcoal-modern-exterior-paint-themes.jpg" alt=""/>
+							<div className="caption">
+								<a className="search-icon" href="images/portfolio/portfolio-1.jpg" data-lightbox="image-1">
+									<i className="tf-ion-ios-search-strong"></i>
+								</a>
+								<h4><a href="">Row Desing - 60 Lakhs</a></h4>
+							</div>
+						</div>
+					</div>
+					<div className="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="mix, design, ios">
+						<div className="portfolio-block">
+							<img className="img-fluid " style={{height:"200px",width:"400px"}} src="https://i.pinimg.com/originals/66/d9/f5/66d9f5afdc5337d3f9eac362b970c426.jpg" alt=""/>
+							<div className="caption">
+								<a className="search-icon" href="images/portfolio/portfolio-2.jpg" data-lightbox="image-1">
+									<i className="tf-ion-ios-search-strong"></i>
+								</a>
+								<h4><a href="">Box Desing -80 Lakhs</a></h4>
+							</div>
+						</div>
+					</div>
+					<div className="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="mix, photography, development">
+						<div className="portfolio-block">
+							<img className="img-fluid" style={{height:"200px",width:"400px"}} src="https://cdn.jhmrad.com/wp-content/uploads/low-budjet-single-floor-house-design-two-side-views_363753.jpg" alt=""/>
+							<div className="caption">
+								<a className="search-icon" href="images/portfolio/portfolio-3.jpg" data-lightbox="image-1">
+									<i className="tf-ion-ios-search-strong"></i>
+								</a>
+								<h4><a href="">Two Side Designs -45 Lakhs</a></h4>
+							</div>
+						</div>
+					</div>
+					<div className="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="mix, photography, ios">
+						<div className="portfolio-block">
+							<img className="img-fluid" style={{height:"200px",width:"400px"}} src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/brewster-mcleod-architects-1486154143.jpg" alt=""/>
+							<div className="caption">
+								<a className="search-icon" href="images/portfolio/portfolio-4.jpg" data-lightbox="image-1">
+									<i className="tf-ion-ios-search-strong"></i>
+								</a>
+								<h4><a href="">Stunning House - 100 Lakhs</a></h4>
+							</div>
+						</div>
+					</div>
+					<div className="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="mix, design">
+						<div className="portfolio-block">
+							<img className="img-fluid"  style={{height:"200px",width:"400px"}} src="https://drummondhouseplans.com/assets/_entemp_/plan-split-levels-3153-v2-front-base-model-845px-46467db1.jpg" alt=""/>
+							<div className="caption">
+								<a className="search-icon" href="images/portfolio/portfolio-5.jpg" data-lightbox="image-1">
+									<i className="tf-ion-ios-search-strong"></i>
+								</a>
+								<h4><a href="">Box 3 Designs - 50 Lakhs</a></h4>
+							</div>
+						</div>
+					</div>
+					<div className="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="mix, design, development">
+						<div className="portfolio-block">
+							<img className="img-fluid"  style={{height:"200px",width:"400px"}} src="https://i.ytimg.com/vi/B7h1GxyK1iE/maxresdefault.jpg" alt=""/>
+							<div className="caption">
+								<a className="search-icon" href="images/portfolio/portfolio-6.jpg" data-lightbox="image-1">
+									<i className="tf-ion-ios-search-strong"></i>
+								</a>
+								<h4><a href="">Arrow Designs - 60 Lakhs</a></h4>
+							</div>
+						</div>
+					</div>
+					<div className="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="mix, photography">
+						<div className="portfolio-block">
+							<img className="img-fluid" style={{height:"200px",width:"400px"}} src="https://2.bp.blogspot.com/-KPfuqREQxTo/WesEGL1WJcI/AAAAAAABFVE/pmOhz4cLtKk26i4-G0OTWKxY-F_7WLfCgCLcBGAs/s1600/single-floor-splendind-look.jpg" alt=""/>
+							<div className="caption">
+								<a className="search-icon" href="images/portfolio/portfolio-7.jpg" data-lightbox="image-1">
+									<i className="tf-ion-ios-search-strong"></i>
+								</a>
+								<h4><a href="">Low Designs - 35 Lakhs</a></h4>
+							</div>
+						</div>
+					</div>
+					<div className="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="mix, design, development">
+						<div className="portfolio-block">
+							<img className="img-fluid" style={{height:"200px",width:"400px"}} src="https://cdn.trendir.com/wp-content/uploads/2016/06/Modern-house-in-Auckland-New-Zealand.jpg" alt=""/>
+							<div className="caption">
+								<a className="search-icon" href="images/portfolio/portfolio-1.jpg" data-lightbox="image-1">
+									<i className="tf-ion-ios-search-strong"></i>
+								</a>
+								<h4><a href="">New Zealand House - 150 Lakhs</a></h4>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+
+        <div className="row filtr-container">
+					<div className="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="mix, design">
+						<div className="portfolio-block">
+							<img className="img-fluid" style={{height:"200px",width:"400px"}} src="http://visualresistance.org/wp-content/uploads/2014/09/best-modern-home-design.jpg" alt=""/>
+							<div className="caption">
+								<a className="search-icon" href="images/portfolio/portfolio-1.jpg" data-lightbox="image-1">
+									<i className="tf-ion-ios-search-strong"></i>
+								</a>
+								<h4><a href="">Lab House - 200 Lakhs</a></h4>
+							</div>
+						</div>
+					</div>
+					<div className="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="mix, design, ios">
+						<div className="portfolio-block">
+							<img className="img-fluid " style={{height:"200px",width:"400px"}} src="https://i.pinimg.com/originals/97/f7/96/97f796e3117ab391a925b680f1e6f066.jpg" alt=""/>
+							<div className="caption">
+								<a className="search-icon" href="images/portfolio/portfolio-2.jpg" data-lightbox="image-1">
+									<i className="tf-ion-ios-search-strong"></i>
+								</a>
+								<h4><a href="">Box Lab House -175 Lakhs</a></h4>
+							</div>
+						</div>
+					</div>
+					<div className="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="mix, photography, development">
+						<div className="portfolio-block">
+							<img className="img-fluid" style={{height:"200px",width:"400px"}} src="https://i.pinimg.com/originals/fb/30/66/fb3066bdb953ac5608ef10a8c4e7476b.jpg" alt=""/>
+							<div className="caption">
+								<a className="search-icon" href="images/portfolio/portfolio-3.jpg" data-lightbox="image-1">
+									<i className="tf-ion-ios-search-strong"></i>
+								</a>
+								<h4><a href="">Lab House - 300 Lakhs</a></h4>
+							</div>
+						</div>
+					</div>
+					<div className="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="mix, photography, ios">
+						<div className="portfolio-block">
+							<img className="img-fluid" style={{height:"200px",width:"400px"}} src="https://i.pinimg.com/originals/21/0b/55/210b5561ead069cc5099fa129df34d69.png" alt=""/>
+							<div className="caption">
+								<a className="search-icon" href="images/portfolio/portfolio-4.jpg" data-lightbox="image-1">
+									<i className="tf-ion-ios-search-strong"></i>
+								</a>
+								<h4><a href="">Lab  House - 300 Lakhs</a></h4>
+							</div>
+						</div>
+					</div>
+					<div className="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="mix, design">
+						<div className="portfolio-block">
+							<img className="img-fluid"  style={{height:"200px",width:"400px"}} src="https://i.pinimg.com/originals/00/77/5f/00775feba9b1ae96b23b7b11d22874d5.jpg" alt=""/>
+							<div className="caption">
+								<a className="search-icon" href="images/portfolio/portfolio-5.jpg" data-lightbox="image-1">
+									<i className="tf-ion-ios-search-strong"></i>
+								</a>
+								<h4><a href="">Sway House - 500 Lakhs</a></h4>
+							</div>
+						</div>
+					</div>
+					<div className="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="mix, design, development">
+						<div className="portfolio-block">
+							<img className="img-fluid"  style={{height:"200px",width:"400px"}} src="https://i.ytimg.com/vi/B7h1GxyK1iE/maxresdefault.jpg" alt=""/>
+							<div className="caption">
+								<a className="search-icon" href="images/portfolio/portfolio-6.jpg" data-lightbox="image-1">
+									<i className="tf-ion-ios-search-strong"></i>
+								</a>
+								<h4><a href="">Arrow Designs - 60 Lakhs</a></h4>
+							</div>
+						</div>
+					</div>
+					<div className="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="mix, photography">
+						<div className="portfolio-block">
+							<img className="img-fluid" style={{height:"200px",width:"400px"}} src="https://2.bp.blogspot.com/-KPfuqREQxTo/WesEGL1WJcI/AAAAAAABFVE/pmOhz4cLtKk26i4-G0OTWKxY-F_7WLfCgCLcBGAs/s1600/single-floor-splendind-look.jpg" alt=""/>
+							<div className="caption">
+								<a className="search-icon" href="images/portfolio/portfolio-7.jpg" data-lightbox="image-1">
+									<i className="tf-ion-ios-search-strong"></i>
+								</a>
+								<h4><a href="">Low Designs - 35 Lakhs</a></h4>
+							</div>
+						</div>
+					</div>
+					<div className="col-md-3 col-sm-6 col-xs-6 filtr-item " data-category="mix, design, development">
+						<div className="portfolio-block">
+							<img className="img-fluid" style={{height:"200px",width:"400px"}} src="https://cdn.trendir.com/wp-content/uploads/2016/06/Modern-house-in-Auckland-New-Zealand.jpg" alt=""/>
+							<div className="caption">
+								<a className="search-icon" href="images/portfolio/portfolio-1.jpg" data-lightbox="image-1">
+									<i className="tf-ion-ios-search-strong"></i>
+								</a>
+								<h4><a href="">New Zealand House - 150 Lakhs</a></h4>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			</div> 
+      {/* <!-- /end col-lg-12 --> */}
+		</div>
+     {/* <!-- end row --> */}
+	</div>
+   {/* <!-- end container --> */}
+</section>
+ {/* <!-- End section --> */}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         
         <section className="content">
           <div className="container">
